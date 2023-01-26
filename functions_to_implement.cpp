@@ -3,20 +3,20 @@
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
-std::vector<std::string> Split(std::string whole, std::string separator) {
-	std::vector<std::string> split_string;
-	int start = 0;
-	do {
-        int idx = whole.find(separator, start);
+// std::vector<std::string> Split(std::string whole, std::string separator) {
+// 	std::vector<std::string> split_string;
+// 	int start = 0;
+// 	do {
+//         int idx = whole.find(separator, start);
  
-        int length = idx - start;
-        split_string.push_back(whole.substr(start, length));
-        start += (length + separator.size());
-    } while (true);
-    split_string.push_back(whole.substr(start));
+//         int length = idx - start;
+//         split_string.push_back(whole.substr(start, length));
+//         start += (length + separator.size());
+//     } while (true);
+//     split_string.push_back(whole.substr(start));
 
-	return split_string;
-}
+// 	return split_string;
+// }
 
 // takes two strings and returns a new string that is the result of removing all occurrences of s2 from s1.
 std::string RemoveAllSubstrings(std::string s1, std::string s2);
@@ -25,15 +25,15 @@ std::string RemoveAllSubstrings(std::string s1, std::string s2);
 std::string RemoveFirstSubstring(std::string s1, std::string s2);
 
 // Joins all strings in a vector together, using the glue string in between them
-std::string Join(std::vector<std::string> pieces, std::string glue) { 
-	std::string combined_string;
+// std::string Join(std::vector<std::string> pieces, std::string glue) { 
+// 	std::string combined_string;
 
-	for (int i = 0; i < pieces.size(); i++) {
-		combined_string = combined_string + pieces[i] + glue;
-	}
+// 	for (int i = 0; i < pieces.size(); i++) {
+// 		combined_string = combined_string + pieces[i] + glue;
+// 	}
 
-	return combined_string;
-}
+// 	return combined_string;
+// }
 
 // takes two vectors of integers, a and b. The function then removes elements from a if they are also in b.
 // If the integer is in b, but not in a, nothing happens.
